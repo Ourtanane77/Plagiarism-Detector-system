@@ -112,13 +112,13 @@ This project is a web-based application designed to detect plagiarism in PDF fil
 ### 1. **Upload PDF**
 ![Upload PDF](https://github.com/user-attachments/assets/ebfd3e88-5274-4713-8194-eeae33e2334f)
 ![Drag and Drop](https://github.com/user-attachments/assets/ae6cb593-5ea8-420e-9b22-d8ab28bf794f)
-
+Description : A clean, minimalist web interface featuring a centered document icon at the top, followed by "PDF Document Analyzer" title and "Upload your PDF for instant analysis" subtitle. The main area displays a dashed-border rectangle for drag-and-drop functionality, complemented by a blue "Choose PDF" button. Below the upload area sits a full-width "Analyze Document" button in light gray, creating a simple and intuitive user flow.
 ### 2. **Processing Page**
 ![Processing](https://github.com/user-attachments/assets/1e47b8a6-d236-4f5d-ada6-1b106fb3892e)
-
+Description : A simple loading indicator card showing a circular blue and gray spinner animation with the text "Analyzing your document..." below it, set against a white background with subtle shadow effects. The design suggests an active processing state while maintaining a clean, uncluttered appearance.
 ### 3. **Plagiarism Report**
 ![Plagiarism Report](https://github.com/user-attachments/assets/bdc4b5de-0cb6-4f79-83a7-a01bf3731115)
-
+Description : A comprehensive analysis dashboard displaying a 48% plagiarism score in a circular progress indicator. The interface is divided into three main sections: document information (showing details like word count, characters, and syllables), analysis results with similarity scores, and a text preview section highlighting potentially plagiarized content in red and yellow. The interface includes action buttons for "Try Another File" and "Download Report" in the top right corner.   
 ---
 
 ## **Getting Started**
