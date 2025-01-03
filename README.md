@@ -1,77 +1,78 @@
-# Plagiarism Detection System
+# **Plagiarism Detection System**
 
-This project is a web-based application designed to detect plagiarism in PDF files. The system is built with a React.js frontend and a Django backend, leveraging powerful tools to provide accurate and reliable plagiarism detection. The app supports uploading PDF files, analyzing their content, and providing detailed reports.
+This project is a web-based application designed to detect plagiarism in PDF files. It combines a **React.js frontend** with a **Django backend**, providing a seamless, accurate, and reliable solution for plagiarism detection. Users can upload PDFs, analyze content, and generate detailed reports.
 
-## Features
+---
 
-### Frontend (React.js):
+## **Features**
+
+### **Frontend (React.js):**
 - User-friendly interface for uploading and managing PDF files.
 - Real-time status updates during the analysis process.
-- Responsive design for seamless use on desktops, tablets, and mobile devices.
+- Responsive design for desktops, tablets, and mobile devices.
 
-### Backend (Django):
-- Robust processing of PDF content.
-- Integration of web search using the Serper API.
-- Perform a comprehensive statistical analysis of PDF content.
+### **Backend (Django):**
+- Robust PDF content processing.
+- Web search integration using the **Serper API**.
+- Comprehensive statistical analysis of content.
 - Advanced plagiarism detection algorithms.
-- Secure handling of files and user information.
+- Secure file handling and user data management.
 
-### Additional Features:
+### **Additional Features:**
 - Detailed plagiarism reports highlighting matching sources.
-- Support for multiple PDF file uploads.
-- Download a full report as PDF file.
+- Multi-file upload support.
+- Downloadable full reports in PDF format.
+
 ---
 
-## Technologies Used
+## **Technologies Used**
 
-### Frontend:
+### **Frontend:**
 - React.js
-- React router dom
+- React Router DOM
 - Axios (for API calls)
-- Tailwind CSS for styling
+- Tailwind CSS (for styling)
 
-### Backend:
+### **Backend:**
 - Django
-- Django Rest Framework (DRF) for API development
-- PyPDF2 or a similar library for PDF parsing
-- NLTK (for text processing)
-- NumPy (for numerical operations)
-- sentence-transformers (for text embeddings)
-- requests (for API calls)
-- re (for text cleaning)
-- Serper API for web search (key required)
-- Sentence Transformer: 'all-MiniLM-L6-v2' model
+- Django REST Framework (DRF)
+- **PDF Processing:** PyPDF2 or equivalent
+- **Text Processing:** NLTK
+- **Numerical Operations:** NumPy
+- **Semantic Analysis:** Sentence Transformers ('all-MiniLM-L6-v2' model)
+- **API Integration:** Requests and Serper API
+- Text cleaning using **regex (re)**
 
 ---
 
-## Backend Architecture
+## **Backend Architecture**
 
-#### Multi-Agent System Components:
+### **Multi-Agent System Components:**
 
-1. **ReaderAgent**
-   - PDF processing and text extraction
-   - Paragraph splitting and cleaning
-   - Metadata extraction
-   - HTML escape handling
+1. **ReaderAgent:**
+   - Extracts and processes text from PDFs.
+   - Splits and cleans paragraphs.
+   - Extracts metadata and handles HTML escape characters.
 
-2. **SearchAgent**
-   - Web search integration via Serper API
-   - URL and snippet extraction for each paragraph
-   - Error handling for failed searches
+2. **SearchAgent:**
+   - Performs web searches using the Serper API.
+   - Extracts URLs and snippets for paragraphs.
+   - Handles errors gracefully.
 
-3. **TextStatisticsAgent**
-   - Word, character, syllable counting
-   - Paragraph analysis
-   - NLTK integration for tokenization
+3. **TextStatisticsAgent:**
+   - Counts words, characters, and syllables.
+   - Analyzes paragraphs using NLTK for tokenization.
 
-4. **PlagiarismCheckAgent**
-   - Sentence transformer model integration
-   - Jaccard similarity calculation
-   - Semantic similarity via embeddings
-   - Color-coded plagiarism detection (yellow: 40-70%, red: >70%)
+4. **PlagiarismCheckAgent:**
+   - Integrates with a sentence transformer model.
+   - Calculates **Jaccard similarity** and semantic similarity.
+   - Highlights plagiarized content with:
+     - **Yellow (40–70%)**
+     - **Red (>70%)**
 
+---
 
-## Project Directory Structure
+## **Project Directory Structure**
 
 ```
 ├── frontend
@@ -98,56 +99,31 @@ This project is a web-based application designed to detect plagiarism in PDF fil
 └── README.md
 ```
 
+---
 
-#### Key Dependencies:
-```python
-- PyPDF2==3.0.1
-- nltk==3.8.1
-- sentence-transformers==2.2.2
-- numpy==1.24.3
-## Screenshots
+## **Screenshots**
 
-### 1. Upload PDF
-![image](https://github.com/user-attachments/assets/ebfd3e88-5274-4713-8194-eeae33e2334f)
-![image](https://github.com/user-attachments/assets/ae6cb593-5ea8-420e-9b22-d8ab28bf794f)
+### 1. **Upload PDF**
+![Upload PDF](https://github.com/user-attachments/assets/ebfd3e88-5274-4713-8194-eeae33e2334f)
+![Drag and Drop](https://github.com/user-attachments/assets/ae6cb593-5ea8-420e-9b22-d8ab28bf794f)
 
-- **Upload Interface**: Allows users to select and upload a PDF file for plagiarism analysis.
-- **Drag-and-Drop Feature**: Users can easily drag and drop files into the upload area.
-- **File Validation**: Ensures only valid PDF files are accepted before proceeding to the next step.
+### 2. **Processing Page**
+![Processing](https://github.com/user-attachments/assets/1e47b8a6-d236-4f5d-ada6-1b106fb3892e)
 
-### 2. Processing Page
-![image](https://github.com/user-attachments/assets/1e47b8a6-d236-4f5d-ada6-1b106fb3892e)
+### 3. **Plagiarism Report**
+![Plagiarism Report](https://github.com/user-attachments/assets/bdc4b5de-0cb6-4f79-83a7-a01bf3731115)
 
-- **Visual Progress Indicator**: Displays the current status of the plagiarism detection process, ensuring users are informed in real-time.
-- **Estimated Time**: Provides an approximate duration for the analysis to complete.
-- **Loading Animation**: Includes a dynamic visual element to indicate the application is actively processing the uploaded PDF file.
+---
 
-### 3. Plagiarism Report
-![image](https://github.com/user-attachments/assets/bdc4b5de-0cb6-4f79-83a7-a01bf3731115)
+## **Getting Started**
 
-- **Highlighted Text**: Sections of the PDF with detected plagiarism are highlighted. Users can click on these highlighted sections to view the corresponding source links or additional details.
-- **Score and Metadata**: Displayed at the top of the report, showing the percentage of detected plagiarism and detailed metadata such as word count and analysis time.
-- **Source Links**: Clickable links that redirect to the original sources of the matching content, allowing users to verify and review the similarities.
-- **Highlighted Text**: Sections of the PDF with detected plagiarism are highlighted.
-- **Score and Metadata**: Displayed at the top of the report.
-- **Source Links**: Links to sources for matching content.
-- **You can get result as pdf**
-
-## Getting Started
-
-### Prerequisites
-
+### **Prerequisites**
 Ensure you have the following installed:
 - Node.js and npm
 - Python 3.x
-- Django
-- PyPDF2
-- nltk
-- sentence-transformers
-- numpy
-- Django rest_framework 
+- Django and related dependencies
 
-### Installation
+### **Installation**
 
 #### Clone the Repository:
 ```bash
@@ -163,53 +139,45 @@ npm start
 ```
 
 #### Backend Setup:
-1. install requirements
 ```bash
 cd backend
 python -m venv env
-source env/bin/activate # On Windows, use `env\Scripts\activate`
-pip install -r requirements.txt or using
-```bash
-pip install django
-pip install PyPDF2
-pip install nltk
-pip install sentence-transformers
-pip install numpy
-pip install djangorestframework
-pip install numpy
-pip install requests
-````
+source env/bin/activate  # On Windows: env\Scripts\activate
+pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
 
+---
 
-## Usage
+## **Usage**
 
-1. Launch the backend server and the frontend application.
-2. Navigate to `http://localhost:3000` to access the application.
-3. Upload a PDF file and wait for the analysis to complete.
-4. View the plagiarism report.
+1. Start both the backend and frontend servers.
+2. Navigate to `http://localhost:3000`.
+3. Upload a PDF and analyze for plagiarism.
+4. View and download the report.
 
+---
 
-## Contributing
+## **Contributing**
 
-We welcome contributions! To get started:
-
+We welcome contributions! Follow these steps:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Make your changes and commit them (`git commit -m 'Add feature'`).
-4. Push to the branch (`git push origin feature-name`).
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make changes and commit: `git commit -m 'Add feature'`.
+4. Push to your branch: `git push origin feature-name`.
 5. Open a pull request.
 
+---
 
-## License
+## **License**
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+Licensed under the **MIT License**. See the `LICENSE` file for details.
 
+---
 
-## Contact
+## **Contact**
 
-For questions or feedback, feel free to reach out:
-- Email: ourtanane.ali@gmail.com , anouzlay@gmail.com 
-- GitHub: [Ourtanane77](https://github.com/Ourtanane77) , [Anouzlay](https://github.com/Anouzlay)
+Feel free to reach out for questions or feedback:
+- **Email:** [ourtanane.ali@gmail.com](mailto:ourtanane.ali@gmail.com), [anouzlay@gmail.com](mailto:anouzlay@gmail.com)
+- **GitHub:** [Ourtanane77](https://github.com/Ourtanane77), [Anouzlay](https://github.com/Anouzlay)
