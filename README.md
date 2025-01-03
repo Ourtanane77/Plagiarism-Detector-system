@@ -84,18 +84,24 @@ This project is a web-based application designed to detect plagiarism in PDF fil
 │   │   ├── styles
 │   │   └── index.js
 │   └── package.json
-├── backend
-│   ├── plagiarismdetection
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-│   ├── api
-│   │   ├── models.py
-│   │   ├── serializers.py
-│   │   ├── views.py
-│   │   └── urls.py
-│   ├── manage.py
-│   └── requirements.txt
+├── baseapp
+│   ├── __pycache__
+│   ├── migrations
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── plagiarismdetection
+│   ├── __pycache__
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+├── manage.py
 └── README.md
 ```
 
