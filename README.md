@@ -1,1 +1,1 @@
-# Plagiarism-Detector-system
+# Plagiarism-Detector
